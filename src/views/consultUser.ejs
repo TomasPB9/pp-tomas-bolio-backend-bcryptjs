@@ -1,0 +1,63 @@
+<%- include ('partials/_header'); -%>
+
+
+  <div class="container">
+    <div class="row">
+      <!-- DATA LIST -->
+      <div class="col-md-9">
+        <div class="col-md-9">
+          <table class="table table-bordered table-hover">
+            <thead>
+              <tr>
+                <th>N° Person</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Password</th>
+                <th>Gender</th>
+                <th>Hobbie</th>
+                <th>Date</th>
+              </tr>
+            </thead>
+            <tbody>
+              <% for(var i=0; i<people.length; i++){ %>
+                <tr>
+                  <td>
+                    <%= i+1 %>
+                  </td>
+                  <td>
+                    <%= people[i].name %>
+                  </td>
+                  <td>
+                    <%= people[i].email %>
+                  </td>
+                  <td>
+                    <%= people[i].phone %>
+                  </td>
+                  <td>
+                    &Phi;
+                    &Omega;
+                    &#10016;
+                    <%=people[i].password %>
+                  </td>
+                  <td>
+                    <%= people[i].gender %>
+                  </td>
+                  <td>
+                    <%= people[i].hobbie %>
+                  </td>
+                  <td>
+                    <%= people[i].date %>
+                  </td>
+                </tr>
+                <% } %>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+  <a href="/">
+    <button class="btn btn-info">Regresar a Pantalla Princial</button>
+  </a>
+  <%- include ('partials/_footer'); -%>
